@@ -3,8 +3,11 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import AppCollectionSection from "../components/AppCollectionSection";
+import AboutSection from "../components/AboutSection";
+import SkillsCloud from "../components/SkillsCloud";
 import DarkModeToggle from "../components/DarkModeToggle";
 import ParticlesBackground from "../components/ParticlesBackground";
+import ResumeDownloadButton from "../components/ResumeDownloadButton";
 
 export default function Home() {
   return (
@@ -12,14 +15,23 @@ export default function Home() {
       <Head>
         <title>Moe Kyaw Aung · Senior Android Developer</title>
         <meta name="description" content="Senior Android Developer portfolio by Moe Kyaw Aung (Dev-moe-kyawaung)" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
       <ParticlesBackground />
       <Navbar />
       <DarkModeToggle />
       <Hero />
+
+      <AboutSection />
+      <SkillsCloud />
       <AppCollectionSection />
+
+      {/* page အလုံးစုံ အဆုံးမှာ CV download button ထည့် */}
+      <div className="px-8 py-10">
+        <div className="mx-auto max-w-2xl text-center">
+          <ResumeDownloadButton />
+        </div>
+      </div>
     </>
   );
 }
